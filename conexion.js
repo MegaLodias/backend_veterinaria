@@ -9,10 +9,13 @@ const { Pool } = require('pg');
 });*/
 
 const pool = new Pool({ //obj pool tiene cadena de conexiones entre postgres y vs
-    host: 'dpg-cne4m4qcn0vc73f9boig-a.oregon-postgres.render.com', 
     user: 'derikaranda',
-    password: 'ym5ACa8r8HNm8FvdVqj3ocPR3H2jCFca',
+    host: 'dpg-cne4m4qcn0vc73f9boig-a.oregon-postgres.render.com', 
     database: 'veterinaria_vfhg',       
-    port: '5432'
+    password: 'ym5ACa8r8HNm8FvdVqj3ocPR3H2jCFca',
+    port: '5432',
+    ssl: {
+        rejectUnauthorized: false,
+    }
 });
 module.exports = { pool };
