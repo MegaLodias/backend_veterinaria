@@ -17,5 +17,7 @@ const pool = new Pool({ //obj pool tiene cadena de conexiones entre postgres y v
     ssl: {
         rejectUnauthorized: false,
     }
+
+    //
 });
 module.exports = { pool };
